@@ -24,18 +24,18 @@ def get_info():
 def send_email(receiver, subject, message):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
-    server.login('zhuoharrison@gmail.com', 'xzvkpgmhrhjuhmzw')
+    server.login('myemail@gmail.com', '*****')
     email = EmailMessage()
-    email['From'] = 'zhuoharrison@gmail.com'
+    email['From'] = 'myemail@gmail.com'
     email['To'] = receiver
     email['Subject'] = subject
     email.set_content(message)
     server.send_message(email)
 
 email_list = {
-    'first': 'zhuoharrison+1@gmail.com',
-    'second': 'zhuoharrison+2@gmail.com',
-    'third': 'zhuoharrison+3@gmail.com'
+    'first': 'myemail+1@gmail.com',
+    'second': 'myemail+2@gmail.com',
+    'third': 'myemail+3@gmail.com'
 }
 
 def get_email_info():
